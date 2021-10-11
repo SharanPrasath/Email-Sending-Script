@@ -1,0 +1,92 @@
+body{
+/*background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1), rgba(243,130,188,1) );*/
+background-image: url("bg.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'poppins', 'sans-serif';
+
+}
+
+.logo{
+	width: 25%;
+	margin-left: 2%;
+	padding: 50px;
+	animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+	%}
+
+.flex1{
+	padding-left:10% ;
+	margin-left: 10%;
+	padding-top: 8%;
+
+	display: flex;
+
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.title{
+	font-size: 5rem;
+	font-weight: bolder;
+	line-height: 0.9;
+}
+
+.content{
+/*	display: flex;
+*/}
+
+form{
+	background: white;
+	width: 20%;
+	justify-content: center;
+
+}
+
+
+strong{
+	color: #CC28E3;
+	font-size: 6rem;
+	animation-iteration-count: infinite;
+  transition: 1s;
+  animation-name: bounce-2;
+        animation-timing-function: ease;
+  
+}
+P{
+	color: white;
+}
+
+.mail{
+	border: solid 3px white;
+    background-color: transparent;
+    padding: 10px;
+    color: #E695F1;
+    width: 200px;
+
+
+border-color: #EBCDF0;
+    border-radius: 100px;
+    font-family: "poppins", "sans-serif";
+    font-size: 1.2rem;
+transition: 1s;
+
+}
+
+.mail:hover{
+	background: #8D4399;
+	transform: translateX(10px);
+}
+
+
+
+
