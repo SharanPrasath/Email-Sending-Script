@@ -9,3 +9,13 @@
   <li>Imp Libraries : SMTP and MIME</li>
   </ul>
 
+``` 
+from flask import Flask,render_template,request
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import os
+from email.mime.base import MIMEBase
+from email import encoders
+
+```
