@@ -81,6 +81,37 @@ def send_email(uname,name, file,mail):
   <li>This is the main functionality on the backend</li>
   <li>Function accepts subject , file as a list , to address as a list , and the message</li>
   <li>Create MIMEMultipart function<, declaring from email and the to email address and the subject key which has the value of the subject that is entered</li>
-  <li>Now I did a for loop that loops through each and evry files and directories , if there is a match with the filename, the filepath is stored under the variable filepath </li>
+  <li>Now I did a for loop that loops through each and every files and directories , if there is a match with the filename, the filepath is stored under the variable filepath </li>
   <li>This is done inorder to avoid errors like FileNotFoundError which occurs if there is no path and only file name is formed</li>
+  <li>Declare object of MIMEbase class and use set payload function to update the message and open read the file.</li>
+  <li>Now use add_header function which has content disposition which says what type of format the message is it. In this case it is a attachment. Now use the attach function passing the attachment as parameter</li>
+  <li>For the final functionality use SMTP server to decalre what type of host we are using , in our case it is gmail.</li>
+  <li>Finally start the server , login using the credentials declared already. Now use sendmail function to send the mail which has the sender EmailID , to address and the message . Close the server</li>
 </ul>
+
+```
+
+@app.route("/mail", methods = ["GET", "POST"])
+def mail():
+    if request.method == "POST":
+        data = request.form
+        try:
+            send_email(data["username"],data["name"],[data['file']],[data['mail']])
+        except:
+            return render_template("mail.html")
+    
+        else:
+            return render_template("mail.html", msg_sent = True)
+        
+    return render_template("mail.html", msg_sent = False)
+
+```
+
+<ul>
+  <li>This function is where data of the form submitted is retrieved using POST method</li>
+  <li>data is retrived using request module, which contains data in the format of keys and values</li>
+  <li>Now I am using Try Excpet and Else in order to except errors</li>
+  <li>Under the Try method send_email function which accepts the username or subject, the message, the file in the format of list and the to address in the form of list</li>
+</ul>
+
+
