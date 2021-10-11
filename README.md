@@ -112,6 +112,7 @@ def mail():
   <li>data is retrived using request module, which contains data in the format of keys and values</li>
   <li>Now I am using Try Excpet and Else in order to except errors</li>
   <li>Under the Try method send_email function which accepts the username or subject, the message, the file in the format of list and the to address in the form of list</li>
+  <li>At last i am rendering template which has the mail.html</li>
 </ul>
 
 
