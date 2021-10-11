@@ -1,2 +1,3 @@
 # Email-Sending-Script
-<img src = "SS1"/>
+<img src = "SS1.png"/>
+
