@@ -21,9 +21,14 @@ def home():
 def mail():
     if request.method == "POST":
         data = request.form
-
-        send_email(data["username"],data["name"],[data['file']],[data['mail']])
-
+        try:
+            send_email(data["username"],data["name"],[data['file']],[data['mail']])
+        except:
+            return render_template("mail.html")
+    
+        else:
+            return render_template("mail.html", msg_sent = True)
+        
     return render_template("mail.html", msg_sent = False)
 
 
